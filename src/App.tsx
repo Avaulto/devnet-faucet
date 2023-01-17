@@ -12,7 +12,7 @@ const App: FC = () => {
     const connection = new Connection(clusterApiUrl('devnet'));
 
     const [alertConfig, setAlertConfig] = useState({open: false, message: null});
-    const [isValid, setIsValid] = useState<boolean>();
+    const [isValid, setIsValid] = useState<boolean | any>();
 
     return (
         <div className="App">
