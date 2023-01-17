@@ -1,0 +1,33 @@
+#root{
+  background-image: url('./assets/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.App {
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#love{
+  position: fixed;
+  color: white;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#love a{
+  display: block;
+}
+#love img{
+  width: 50px;
+}
