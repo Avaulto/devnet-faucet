@@ -4,8 +4,8 @@ import { BlockheightBasedTransactionConfirmationStrategy, Connection, Keypair, L
 import { Box, Button } from '@mui/material';
 import { MINT_SIZE, TOKEN_PROGRAM_ID, getMinimumBalanceForRentExemptMint, createInitializeMintInstruction, createMint } from '@solana/spl-token';
 
-
-
+import Plausible from 'plausible-tracker'
+const { trackEvent } = Plausible();
 interface BtnFaucetProps {
     walletAddress: string;
     isValid: boolean;
@@ -38,6 +38,7 @@ const BtnFaucet: FC<BtnFaucetProps> = ({ walletAddress, connection, setAlertConf
         }
     }
     const handleAirdrop = () => {
+        trackEvent('airdrop sol') 
         requestAirdrop(walletAddress)
     }
     const createDemoAccount = () => {
@@ -45,6 +46,7 @@ const BtnFaucet: FC<BtnFaucetProps> = ({ walletAddress, connection, setAlertConf
         return keypair;
     };
     const requestNft = async () => {
+        trackEvent('airdrop nft') 
         // create middleware account
         const feePayer = createDemoAccount()
         // airdrop this account
@@ -67,6 +69,8 @@ const BtnFaucet: FC<BtnFaucetProps> = ({ walletAddress, connection, setAlertConf
     }
 
     const mintSPL = async () => {
+        trackEvent('airdrop spl') 
+
         // create middleware account
         const feePayer = createDemoAccount();
 
