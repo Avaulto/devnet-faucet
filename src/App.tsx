@@ -6,13 +6,11 @@ import BtnFaucet from './components/btn-faucet/btn-faucet';
 import WalletInput from './components/wallet-input/wallet-input';
 import logo from './assets/logo_white.png';
 import Plausible from 'plausible-tracker';
-require('./App.css');
-import Plausible from 'plausible-tracker';
-
 const { trackPageview ,enableAutoPageviews } = Plausible()
 trackPageview()
 enableAutoPageviews();
 
+require('./App.css');
 const App: FC = () => {
     const [address, setAddress] = useState<any>("");
     const connection = new Connection(clusterApiUrl('devnet'));
