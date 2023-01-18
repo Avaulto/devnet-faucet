@@ -7,11 +7,12 @@ import WalletInput from './components/wallet-input/wallet-input';
 import logo from './assets/logo_white.png';
 import Plausible from 'plausible-tracker';
 require('./App.css');
-const { trackPageview, enableAutoPageviews } = Plausible({
-    hashMode: true,
-})
+import Plausible from 'plausible-tracker';
+
+const { trackPageview ,enableAutoPageviews } = Plausible()
 trackPageview()
-enableAutoPageviews()
+enableAutoPageviews();
+
 const App: FC = () => {
     const [address, setAddress] = useState<any>("");
     const connection = new Connection(clusterApiUrl('devnet'));
