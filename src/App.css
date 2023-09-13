@@ -5,29 +5,38 @@
   background-position: top;
 }
 .App {
-
+  flex-direction: column;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-#love{
-  position: fixed;
-  color: white;
-  bottom: 50px;
-  left: 0;
-  right: 0;
+#love {
+  color: #fff;
+  width: 200px;
+  bottom: 24px;
+  margin: 100px auto;
+  display: flex;
   text-transform: uppercase;
   align-items: center;
-  display: flex;
+  text-align: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 14px;
+  text-transform: capitalize;
+  filter: drop-shadow(2px 4px 6px black);
 }
-#love a{
-  display: block;
-}
-#love img{
-  width: 50px;
-}
+  #love  a{
+      text-decoration: none;
+  }
+  #love  span#logo {
+      display: block;
+      background: linear-gradient(96.02deg, #0CDAC4 0.22%, #395DF0 31.45%, #FD49AD 71.02%, #FF845A 104.34%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      --WebkitTextFillColor: transparent;
+  }
+  #love  img{
+      width: 40px;
+  }

@@ -4,7 +4,7 @@ import { clusterApiUrl, Connection } from '@solana/web3.js';
 import { FC, useState } from 'react';
 import BtnFaucet from './components/btn-faucet/btn-faucet';
 import WalletInput from './components/wallet-input/wallet-input';
-import logo from './assets/logo_white.png';
+import logo from './assets/solanahub-logo.svg';
 import Plausible from 'plausible-tracker';
 const { trackPageview ,enableAutoPageviews } = Plausible()
 trackPageview()
@@ -32,8 +32,10 @@ const App: FC = () => {
                     </Alert>
                 </Snackbar>
             </Container>
-            <span id='love'>built with LOVE by <a href="https://avaulto.com" target="_blank"><img src={logo} alt='avaulto logo' /></a></span><br />
-
+      <span id="love">built with Love by <a href="https://www.SolanaHub.app" target="_blank">
+        <span id="logo">SolanaHub</span>
+        <img src={logo} alt="solanhub logo"/></a>
+      </span>
         </div>
     );
 };
